@@ -16,12 +16,12 @@
   }
 
   body {
-    @apply bg-gray-900;
+    @apply bg-stone-900;
     -webkit-overflow-scrolling: touch;
   }
 
   code {
-    @apply rounded-md bg-gray-800 px-2 py-1;
+    @apply rounded-md bg-stone-800 px-2 py-1;
   }
 
   input[type='search']::-webkit-search-cancel-button {
@@ -36,10 +36,10 @@
   }
 
   .sidebar {
-    @apply border-r border-gray-700;
+    @apply border-r border-stone-700;
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
-    background: linear-gradient(180deg, rgba(31, 41, 55, 1) 0%, #131928 100%);
+    background: linear-gradient(180deg, rgba(46, 40, 42, 1) 0%, #2e282a 100%);
   }
 
   .slideover {
@@ -52,10 +52,11 @@
   }
 
   .plex-button {
-    @apply flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-center text-sm font-medium text-white transition duration-150 ease-in-out disabled:opacity-50;
+    @apply flex w-full justify-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-center text-sm font-medium text-white transition duration-150 ease-in-out disabled:opacity-50;
     background-color: #cc7b19;
   }
 
+  /* FIX: this line was invalid CSS and can break the build */
   .plex-button:hover {
     background: #f19a30;
   }
@@ -183,11 +184,11 @@
   }
 
   .media-facts {
-    @apply rounded-lg border border-gray-700 bg-gray-900 text-sm font-bold text-gray-300 shadow;
+    @apply rounded-lg border border-stone-700 bg-stone-900 text-sm font-bold text-gray-300 shadow;
   }
 
   .media-fact {
-    @apply flex justify-between border-b border-gray-700 px-4 py-2 last:border-b-0;
+    @apply flex justify-between border-b border-stone-700 px-4 py-2 last:border-b-0;
   }
 
   .media-fact-value {
@@ -195,7 +196,7 @@
   }
 
   .media-ratings {
-    @apply flex items-center justify-center space-x-5 border-b border-gray-700 px-4 py-2 font-medium last:border-b-0;
+    @apply flex items-center justify-center space-x-5 border-b border-stone-700 px-4 py-2 font-medium last:border-b-0;
   }
 
   .media-rating {
@@ -247,7 +248,7 @@
   }
 
   .actions {
-    @apply mt-8 border-t border-gray-700 pt-5 text-white;
+    @apply mt-8 border-t border-stone-700 pt-5 text-white;
   }
 
   label,
@@ -283,14 +284,14 @@
   }
 
   input[type='checkbox'] {
-    @apply h-6 w-6 rounded-md text-indigo-600 transition duration-150 ease-in-out;
+    @apply h-6 w-6 rounded-md text-orange-600 transition duration-150 ease-in-out;
   }
 
   input[type='text'],
   input[type='password'],
   select,
   textarea {
-    @apply block w-full min-w-0 flex-1 rounded-md border border-gray-500 bg-gray-700 text-white transition duration-150 ease-in-out sm:text-sm sm:leading-5;
+    @apply block w-full min-w-0 flex-1 rounded-md border border-stone-500 bg-stone-700 text-white transition duration-150 ease-in-out sm:text-sm sm:leading-5;
   }
 
   input.rounded-l-only,
@@ -318,7 +319,7 @@
   }
 
   button.input-action {
-    @apply relative -ml-px inline-flex items-center border border-gray-500 bg-indigo-600 bg-opacity-80 px-3 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out last:rounded-r-md hover:bg-opacity-100 active:bg-gray-100 active:text-gray-700 sm:px-3.5;
+    @apply relative -ml-px inline-flex items-center border border-stone-500 bg-orange-600 bg-opacity-80 px-3 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out last:rounded-r-md hover:bg-opacity-100 active:bg-stone-100 active:text-gray-700 sm:px-3.5;
   }
 
   .button-md svg,
@@ -340,7 +341,7 @@
   }
 
   .protocol {
-    @apply inline-flex cursor-default items-center rounded-l-md border border-r-0 border-gray-500 bg-gray-600 px-3 text-gray-100 sm:text-sm;
+    @apply inline-flex cursor-default items-center rounded-l-md border border-r-0 border-stone-500 bg-stone-600 px-3 text-gray-100 sm:text-sm;
   }
 
   .error {
@@ -360,39 +361,39 @@
   }
 
   .react-select-container .react-select__control {
-    @apply rounded-md border border-gray-500 bg-gray-700 text-white hover:border-gray-500;
+    @apply rounded-md border border-stone-500 bg-stone-700 text-white hover:border-stone-500;
   }
 
   .react-select-container-dark .react-select__control {
-    @apply border border-gray-700 bg-gray-800;
+    @apply border border-stone-700 bg-stone-800;
   }
 
   .react-select-container .react-select__control--is-focused {
-    @apply rounded-md border border-gray-500 bg-gray-700 text-white shadow;
+    @apply rounded-md border border-stone-500 bg-stone-700 text-white shadow;
   }
 
   .react-select-container-dark .react-select__control--is-focused {
-    @apply border-gray-600 bg-gray-800;
+    @apply border-stone-600 bg-stone-800;
   }
 
   .react-select-container .react-select__menu {
-    @apply bg-gray-700 text-gray-300;
+    @apply bg-stone-700 text-gray-300;
   }
 
   .react-select-container-dark .react-select__menu {
-    @apply bg-gray-800;
+    @apply bg-stone-800;
   }
 
   .react-select-container .react-select__option--is-focused {
-    @apply bg-gray-600 text-white;
+    @apply bg-stone-600 text-white;
   }
 
   .react-select-container-dark .react-select__option--is-focused {
-    @apply bg-gray-700;
+    @apply bg-stone-700;
   }
 
   .react-select-container .react-select__indicator-separator {
-    @apply bg-gray-500;
+    @apply bg-stone-500;
   }
 
   .react-select-container .react-select__indicator {
@@ -404,7 +405,7 @@
   }
 
   .react-select-container .react-select__multi-value {
-    @apply rounded-md border border-gray-500 bg-gray-800;
+    @apply rounded-md border border-stone-500 bg-stone-800;
   }
 
   .react-select-container .react-select__multi-value__label {
@@ -457,7 +458,7 @@
   }
 
   input[type='range']::-webkit-slider-thumb {
-    @apply rounded-full border-0 bg-indigo-500;
+    @apply rounded-full border-0 bg-orange-500;
     pointer-events: all;
     width: 16px;
     height: 16px;
@@ -465,7 +466,7 @@
   }
 
   input[type='range']::-moz-range-thumb {
-    @apply rounded-full border-0 bg-indigo-500;
+    @apply rounded-full border-0 bg-orange-500;
     pointer-events: all;
     width: 16px;
     height: 16px;
@@ -494,24 +495,21 @@
     min-height: calc(100vh + env(safe-area-inset-top));
   }
 
-  /* Used for animating height */
   .extra-max-height {
     max-height: 100rem;
   }
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
-  /* Hide scrollbar for IE, Edge and Firefox */
   .hide-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
 
   .text-overseerr {
-    @apply bg-gradient-to-br from-indigo-400 to-purple-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-orange-400 to-orange-600 bg-clip-text text-transparent;
   }
 
   @media all and (display-mode: browser) {
@@ -542,4 +540,242 @@
 
 .ptr--box {
   margin-bottom: -13px !important;
+}
+
+/* =========================================================
+   R4AS FORCE OVERRIDES
+   Catch remaining indigo/purple/blue utilities used in components
+   ========================================================= */
+@layer utilities {
+  .bg-indigo-400,
+  .bg-indigo-500,
+  .bg-indigo-600,
+  .bg-indigo-700,
+  .bg-purple-400,
+  .bg-purple-500,
+  .bg-purple-600,
+  .bg-purple-700,
+  .bg-blue-400,
+  .bg-blue-500,
+  .bg-blue-600,
+  .bg-blue-700 {
+    @apply !bg-orange-600;
+  }
+
+  .hover\:bg-indigo-400:hover,
+  .hover\:bg-indigo-500:hover,
+  .hover\:bg-indigo-600:hover,
+  .hover\:bg-indigo-700:hover,
+  .hover\:bg-purple-400:hover,
+  .hover\:bg-purple-500:hover,
+  .hover\:bg-purple-600:hover,
+  .hover\:bg-purple-700:hover,
+  .hover\:bg-blue-400:hover,
+  .hover\:bg-blue-500:hover,
+  .hover\:bg-blue-600:hover,
+  .hover\:bg-blue-700:hover {
+    @apply !bg-orange-500;
+  }
+
+  .active\:bg-indigo-400:active,
+  .active\:bg-indigo-500:active,
+  .active\:bg-indigo-600:active,
+  .active\:bg-indigo-700:active,
+  .active\:bg-purple-400:active,
+  .active\:bg-purple-500:active,
+  .active\:bg-purple-600:active,
+  .active\:bg-purple-700:active,
+  .active\:bg-blue-400:active,
+  .active\:bg-blue-500:active,
+  .active\:bg-blue-600:active,
+  .active\:bg-blue-700:active {
+    @apply !bg-orange-700;
+  }
+
+  .text-indigo-400,
+  .text-indigo-500,
+  .text-indigo-600,
+  .text-indigo-700,
+  .text-purple-400,
+  .text-purple-500,
+  .text-purple-600,
+  .text-purple-700,
+  .text-blue-400,
+  .text-blue-500,
+  .text-blue-600,
+  .text-blue-700 {
+    @apply !text-orange-500;
+  }
+
+  .border-indigo-400,
+  .border-indigo-500,
+  .border-indigo-600,
+  .border-indigo-700,
+  .border-purple-400,
+  .border-purple-500,
+  .border-purple-600,
+  .border-purple-700,
+  .border-blue-400,
+  .border-blue-500,
+  .border-blue-600,
+  .border-blue-700 {
+    @apply !border-orange-600;
+  }
+
+  .ring-indigo-400,
+  .ring-indigo-500,
+  .ring-indigo-600,
+  .ring-indigo-700,
+  .ring-purple-400,
+  .ring-purple-500,
+  .ring-purple-600,
+  .ring-purple-700,
+  .ring-blue-400,
+  .ring-blue-500,
+  .ring-blue-600,
+  .ring-blue-700,
+  .focus\:ring-indigo-400:focus,
+  .focus\:ring-indigo-500:focus,
+  .focus\:ring-indigo-600:focus,
+  .focus\:ring-indigo-700:focus,
+  .focus\:ring-purple-400:focus,
+  .focus\:ring-purple-500:focus,
+  .focus\:ring-purple-600:focus,
+  .focus\:ring-purple-700:focus,
+  .focus\:ring-blue-400:focus,
+  .focus\:ring-blue-500:focus,
+  .focus\:ring-blue-600:focus,
+  .focus\:ring-blue-700:focus {
+    --tw-ring-color: rgb(234 115 23 / 0.35) !important; /* EA7317 */
+  }
+}
+
+/* =========================================================
+   R4AS OPACITY-SAFE REMAPS (CRITICAL)
+   Fix blue-gray layers and gradients without breaking bg-opacity
+   Put at the VERY END of the file
+   ========================================================= */
+@layer utilities {
+  /* 1) Remap bg-gray/bg-slate colors without changing opacity */
+  .bg-gray-950 {
+    background-color: rgb(12 10 9 / var(--tw-bg-opacity)) !important;
+  } /* stone-950 */
+  .bg-gray-900 {
+    background-color: rgb(28 25 23 / var(--tw-bg-opacity)) !important;
+  } /* stone-900 */
+  .bg-gray-800 {
+    background-color: rgb(41 37 36 / var(--tw-bg-opacity)) !important;
+  } /* stone-800 */
+  .bg-gray-700 {
+    background-color: rgb(68 64 60 / var(--tw-bg-opacity)) !important;
+  } /* stone-700 */
+  .bg-gray-600 {
+    background-color: rgb(87 83 78 / var(--tw-bg-opacity)) !important;
+  } /* stone-600 */
+
+  .bg-slate-950 {
+    background-color: rgb(12 10 9 / var(--tw-bg-opacity)) !important;
+  }
+  .bg-slate-900 {
+    background-color: rgb(28 25 23 / var(--tw-bg-opacity)) !important;
+  }
+  .bg-slate-800 {
+    background-color: rgb(41 37 36 / var(--tw-bg-opacity)) !important;
+  }
+  .bg-slate-700 {
+    background-color: rgb(68 64 60 / var(--tw-bg-opacity)) !important;
+  }
+
+  .bg-zinc-950 {
+    background-color: rgb(12 10 9 / var(--tw-bg-opacity)) !important;
+  }
+  .bg-zinc-900 {
+    background-color: rgb(28 25 23 / var(--tw-bg-opacity)) !important;
+  }
+  .bg-zinc-800 {
+    background-color: rgb(41 37 36 / var(--tw-bg-opacity)) !important;
+  }
+
+  .bg-neutral-950 {
+    background-color: rgb(12 10 9 / var(--tw-bg-opacity)) !important;
+  }
+  .bg-neutral-900 {
+    background-color: rgb(28 25 23 / var(--tw-bg-opacity)) !important;
+  }
+  .bg-neutral-800 {
+    background-color: rgb(41 37 36 / var(--tw-bg-opacity)) !important;
+  }
+
+  /* 2) Fix blue top band: remap common gradient stops */
+  .from-gray-950 {
+    --tw-gradient-from: rgb(12 10 9) var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .from-gray-900 {
+    --tw-gradient-from: rgb(28 25 23) var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .from-gray-800 {
+    --tw-gradient-from: rgb(41 37 36) var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .to-gray-950 {
+    --tw-gradient-to: rgb(12 10 9) var(--tw-gradient-to-position);
+  }
+  .to-gray-900 {
+    --tw-gradient-to: rgb(28 25 23) var(--tw-gradient-to-position);
+  }
+  .to-gray-800 {
+    --tw-gradient-to: rgb(41 37 36) var(--tw-gradient-to-position);
+  }
+
+  .from-slate-900 {
+    --tw-gradient-from: rgb(28 25 23) var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .to-slate-900 {
+    --tw-gradient-to: rgb(28 25 23) var(--tw-gradient-to-position);
+  }
+
+  /* 3) Fix purple/indigo gradients -> orange (selected sidebar etc) */
+  .from-indigo-400 {
+    --tw-gradient-from: rgb(251 146 60) var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  } /* orange-400 */
+  .from-indigo-500 {
+    --tw-gradient-from: rgb(249 115 22) var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  } /* orange-500 */
+  .from-indigo-600 {
+    --tw-gradient-from: rgb(234 88 12) var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  } /* orange-600 */
+  .from-indigo-700 {
+    --tw-gradient-from: rgb(194 65 12) var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  } /* orange-700 */
+
+  .to-purple-400 {
+    --tw-gradient-to: rgb(251 146 60) var(--tw-gradient-to-position);
+  } /* orange-400 */
+  .to-purple-500 {
+    --tw-gradient-to: rgb(249 115 22) var(--tw-gradient-to-position);
+  } /* orange-500 */
+  .to-purple-600 {
+    --tw-gradient-to: rgb(234 88 12) var(--tw-gradient-to-position);
+  } /* orange-600 */
+  .to-purple-700 {
+    --tw-gradient-to: rgb(194 65 12) var(--tw-gradient-to-position);
+  } /* orange-700 */
+
+  /* 4) Sidebar selected: force orange even if it’s gradient-based */
+  .sidebar a[aria-current='page'],
+  .sidebar a[aria-current='true'],
+  .sidebar [aria-current='page'],
+  .sidebar [aria-current='true'] {
+    background-color: rgb(234 88 12) !important; /* orange-600 */
+    color: #fff !important;
+    background-image: none !important;
+  }
 }

@@ -1,6 +1,12 @@
+import path from 'path';
 import 'reflect-metadata';
 import type { DataSourceOptions, EntityTarget, Repository } from 'typeorm';
 import { DataSource } from 'typeorm';
+
+const fromServerRoot = (...parts: string[]) =>
+  path.join(process.cwd(), 'server', ...parts);
+const fromDistRoot = (...parts: string[]) =>
+  path.join(process.cwd(), 'dist', ...parts);
 
 const devConfig: DataSourceOptions = {
   type: 'sqlite',
@@ -11,9 +17,12 @@ const devConfig: DataSourceOptions = {
   migrationsRun: false,
   logging: false,
   enableWAL: true,
-  entities: ['server/entity/**/*.ts'],
-  migrations: ['server/migration/**/*.ts'],
-  subscribers: ['server/subscriber/**/*.ts'],
+
+  // IMPORTANT: use **/*.ts (not *.ts) so nested files are found
+  // and keep {ts,js} to work with different dev runtimes.
+  entities: [fromServerRoot('entity', '**', '*.{ts,js}')],
+  migrations: [fromServerRoot('migration', '**', '*.{ts,js}')],
+  subscribers: [fromServerRoot('subscriber', '**', '*.{ts,js}')],
 };
 
 const prodConfig: DataSourceOptions = {
@@ -25,9 +34,10 @@ const prodConfig: DataSourceOptions = {
   migrationsRun: false,
   logging: false,
   enableWAL: true,
-  entities: ['dist/entity/**/*.js'],
-  migrations: ['dist/migration/**/*.js'],
-  subscribers: ['dist/subscriber/**/*.js'],
+
+  entities: [fromDistRoot('entity', '**', '*.js')],
+  migrations: [fromDistRoot('migration', '**', '*.js')],
+  subscribers: [fromDistRoot('subscriber', '**', '*.js')],
 };
 
 const dataSource = new DataSource(
