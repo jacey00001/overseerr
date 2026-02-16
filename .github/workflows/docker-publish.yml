@@ -30,6 +30,10 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/overseerr:r4as
+          no-cache: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/overseerr:r4as
+            ghcr.io/${{ github.repository_owner }}/overseerr:sha-${{ github.sha }}
           build-args: |
             COMMIT_TAG=${{ github.sha }}
+
